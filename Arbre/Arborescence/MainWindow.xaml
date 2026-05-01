@@ -1,0 +1,90 @@
+﻿<Window x:Class="Arborescence.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DemoArbre"
+        mc:Ignorable="d"
+        Name="WDWMain"
+        Title="Arborescence" SizeToContent="WidthAndHeight" ResizeMode="NoResize" Width="516">
+    <Grid Name="GRDMain" Margin="4,0,10,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Name="SPLMain" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10" Grid.Column="0">
+
+            <TextBlock Name="TBKTitle" Text="L'arbre qui cache la forêt" FontSize="20" Margin="5"/>
+
+            <GroupBox Name="GBXSignup"  Header="Inscription">
+                <StackPanel Name="SPLSignup">
+                    <Grid Name="GRDSignup" Margin="0,10,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Name="LBLUserFirstName" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Content="Prénom"/>
+                        <TextBox Name="TBXUserFirstName"  Grid.Row="0" Grid.Column="1"/>
+                        <Label Name="LBLUserName" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Content="Nom"/>
+                        <TextBox Name="TBXUserName" Grid.Row="1" Grid.Column="1"/>
+                        <Label Name="LBLUserSignup" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="2" Content="Identifiant"/>
+                        <TextBox Name="TBXUserSignup" Grid.Row="2" Grid.Column="1"/>
+                        <Label Name="LBLPwdSignup" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="3" Content="Mot de Passe"/>
+                        <PasswordBox Name="PBXPwdSignup" Grid.Row="3" Grid.Column="1"/>
+                        <Label Name="LBLPwdSignupConf" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="4" Content="Confirmer Mot de Passe"/>
+                        <PasswordBox Name="PBXPwdSignupConf" Grid.Row="4" Grid.Column="1"/>
+                    </Grid>
+                    <Button Name="BTNSignup" Content=" Inscription " HorizontalAlignment="Center" Click="BTNSignup_Click"/>
+                    <TextBlock Name="TBKSignin" HorizontalAlignment="Center" >                                
+        <Hyperlink Name="LNKSignin" Click="LNKSignin_Click">J'ai déjà un compte
+        </Hyperlink >
+                    </TextBlock>
+                </StackPanel>
+            </GroupBox>
+            <GroupBox Name="GBXSignin" Header="Connexion">
+                <StackPanel Name="SPLSignin">
+                    <Grid Name="GRDSignin" Margin="0,10,0,10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition />
+                            <ColumnDefinition />
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition />
+                            <RowDefinition />
+                        </Grid.RowDefinitions>
+                        <Label Name="LBLUserSignin" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="0" Content="Identifiant"/>
+                        <TextBox Name="TBXUserSignin" Grid.Row="0" Grid.Column="1"/>
+                        <Label Name="LBLPwdSignin" HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Row="1" Content="Mot de Passe"/>
+                        <PasswordBox Name="PBXPwdSignin" Grid.Row="1" Grid.Column="1"/>
+                    </Grid>
+                    <Button Name="BTNSignin" Content=" Connexion " HorizontalAlignment="Center" Click="BTNSignin_Click"/>
+                    <TextBlock Name="TBKSignup" HorizontalAlignment="Center" >                                
+                    <Hyperlink Name="LNKSignup" Click="LNKSignup_Click">Pas encore de compte?
+                    </Hyperlink>
+                    </TextBlock>
+                </StackPanel>
+            </GroupBox>
+            <TextBlock Name="TBKHelp" HorizontalAlignment="Center" >                                
+            <Hyperlink Name="LNKHelp" Click="LNKHelp_Click">J'ai besoin d'aide
+            </Hyperlink>
+            </TextBlock>
+        </StackPanel>
+        <GroupBox x:Name="GBXHelp" Grid.Column="1" Header="Aide">
+            <StackPanel x:Name="SPLHelp">
+                <Grid x:Name="GRDHelp" Height="160">
+                    <Label x:Name="LBLHelpDecription" Content="Bienvenue dans &#xD;&#xA;Arborescence, pour te créer un&#xD;&#xA;compte, tu as juste besoin de &#xD;&#xA;fournir ton nom, ton prénom, une adresse mail valide et un mot de passe. Si tu as déjà un compte chez&#xD;&#xA;nous, il te suffit alors de &#xD;&#xA;saisir ton identifiant et ton mot &#xD;&#xA;de passe." HorizontalAlignment="Left" Margin="16,10,0,0" VerticalAlignment="Top" Height="131" Width="216" Grid.ColumnSpan="4"/>
+                    <Button x:Name="BTNHelp" Content="j'ai compris" HorizontalAlignment="Left" Margin="84,133,0,0" VerticalAlignment="Top" Click="Button_Click" RenderTransformOrigin="-0.109,0.655"/>
+                </Grid>
+            </StackPanel>
+        </GroupBox>
+
+
+    </Grid>
+</Window>
