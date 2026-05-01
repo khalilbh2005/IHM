@@ -1,4 +1,4 @@
-# Projets IHM — C# / .NET
+# Projets IHM ( C# / .NET )
 
 Série de projets développés en C# / .NET dans le cadre de la matière IHM (Interface Homme-Machine) à l'IUT d'Orsay.
 
